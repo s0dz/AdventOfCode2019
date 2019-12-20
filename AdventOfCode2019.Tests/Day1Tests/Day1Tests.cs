@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using SUT = AdventOfCode2019.Day1.Day1;
+using System.Collections.Generic;
 using NUnit.Framework;
 
-namespace AdventOfCode2019.Tests
+namespace AdventOfCode2019.Tests.Day1Tests
 {
     [TestFixture]
     public class Day1Tests
@@ -13,22 +14,22 @@ namespace AdventOfCode2019.Tests
         [Test]
         public void FuelCounterUpper_Test()
         {
-            var result = Day1.FuelCounterUpper(new List<int>{12});
+            var result = SUT.FuelCounterUpper(new List<int> { 12 });
             Assert.AreEqual(2, result);
 
-            result = Day1.FuelCounterUpper(new List<int>{14});
+            result = SUT.FuelCounterUpper(new List<int> { 14 });
             Assert.AreEqual(2, result);
 
-            result = Day1.FuelCounterUpper(new List<int>{1969});
+            result = SUT.FuelCounterUpper(new List<int> { 1969 });
             Assert.AreEqual(654, result);
 
-            result = Day1.FuelCounterUpper(new List<int>{100756});
+            result = SUT.FuelCounterUpper(new List<int> { 100756 });
             Assert.AreEqual(33583, result);
 
-            result = Day1.FuelCounterUpper(Modules);
+            result = SUT.FuelCounterUpper(Modules);
             Assert.AreEqual(3287899, result);
         }
-        
+
         public List<int> Modules = new List<int>
         {
             73910,

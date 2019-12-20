@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
+using AdventOfCode2019.Day1;
 using NUnit.Framework;
 
-namespace AdventOfCode2019.Tests
+namespace AdventOfCode2019.Tests.Day1Tests
 {
     [TestFixture]
-    public class Day2Tests
+    public class Day1PartDeuxTests
     {
         // 1) A module of mass 14 requires 2 fuel.
         //    This fuel requires no further fuel (2 divided by 3 and rounded down is 0, which would call for a negative fuel),
@@ -16,17 +17,17 @@ namespace AdventOfCode2019.Tests
         [Test]
         public void FuelCounterUpper_Test()
         {
-            var result = Day2.FuelCounterUpper(new List<int> { 14 });
+            var result = Day1PartDeux.FuelCounterUpper(new List<int> { 14 });
             Assert.AreEqual(2, result);
-            
-            result = Day2.FuelCounterUpper(new List<int> { 1969 });
+
+            result = Day1PartDeux.FuelCounterUpper(new List<int> { 1969 });
             Assert.AreEqual(966, result);
 
-            result = Day2.FuelCounterUpper(new List<int> { 100756 });
+            result = Day1PartDeux.FuelCounterUpper(new List<int> { 100756 });
             Assert.AreEqual(50346, result);
 
-            result = Day2.FuelCounterUpper(Modules);
-            //Assert.AreEqual(3287899, result);
+            result = Day1PartDeux.FuelCounterUpper(Modules);
+            Assert.AreEqual(4928963, result);
         }
 
         public List<int> Modules = new List<int>

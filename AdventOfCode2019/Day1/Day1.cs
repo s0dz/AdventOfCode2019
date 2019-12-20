@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace AdventOfCode2019
+namespace AdventOfCode2019.Day1
 {
     // The Fuel Counter-Upper needs to know the total fuel requirement.
     // To find it, individually calculate the fuel needed for the mass of each module (your puzzle input),
@@ -31,7 +31,7 @@ namespace AdventOfCode2019
         // 4) Subtract 2
         private static int CalculateFuelRequired(int module)
         {
-            var fuel = (module / 3) - 2;
+            var fuel = module / 3 - 2;
 
             return fuel;
         }
